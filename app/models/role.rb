@@ -1,6 +1,9 @@
 class Role < ApplicationRecord
   # Direct associations
 
+  has_many   :staffs,
+             :dependent => :nullify
+
   belongs_to :restaurant
 
   # Indirect associations

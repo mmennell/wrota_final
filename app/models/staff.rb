@@ -1,6 +1,8 @@
 class Staff < ApplicationRecord
   # Direct associations
 
+  belongs_to :role
+
   has_many   :jobs,
              :dependent => :nullify
 
