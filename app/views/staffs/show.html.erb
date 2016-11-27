@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h3>Staff #<%= @staff.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Firstname</dt>
+      <dd><%= @staff.firstname %></dd>
+
+      <dt>Lastname</dt>
+      <dd><%= @staff.lastname %></dd>
+
+      <dt>Contact telephone</dt>
+      <dd><%= @staff.contact_telephone %></dd>
+
+      <dt>Photo</dt>
+      <dd><%= @staff.photo %></dd>
+
+      <dt>Home restaurant</dt>
+      <dd><%= @staff.home_restaurant_id %></dd>
+
+      <dt>User</dt>
+      <dd><%= @staff.user_id %></dd>
+
+      <dt>Verified</dt>
+      <dd><%= @staff.verified %></dd>
+
+      <dt>Role</dt>
+      <dd><%= @staff.role_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/staffs" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/staffs/<%= @staff.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_staff/<%= @staff.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
