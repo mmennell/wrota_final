@@ -26,10 +26,28 @@
         <td><%= staff.lastname %></td>
         <td><%= staff.contact_telephone %></td>
         <td><img src='<%= staff.photo %>' class='img-responsive'></td>
-        <td><%= staff.home_restaurant.restaurant_name %></td>
-        <td><%= staff.user.email %></td>
+        <td>
+          <% if staff.home_restaurant.present? %>
+            <a href="/restaurants/<%= staff.home_restaurant.id %>">
+              <%= staff.home_restaurant.restaurant_name %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if staff.user.present? %>
+            <a href="/users/<%= staff.user.id %>">
+              <%= staff.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td><%= staff.verified %></td>
-        <td><%= staff.role.role_name %></td>
+        <td>
+          <% if staff.role.present? %>
+            <a href="/roles/<%= staff.role.id %>">
+              <%= staff.role.role_name %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/staffs/<%= staff.id %>" class="btn btn-primary">Show</a>
           <a href="/staffs/<%= staff.id %>/edit" class="btn btn-warning">Edit</a>
