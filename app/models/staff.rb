@@ -5,4 +5,6 @@ class Staff < ApplicationRecord
 
   # Validations
 
+  validates :user_id, :uniqueness => true
+
 end
