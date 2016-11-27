@@ -6,6 +6,8 @@ class RolesController < ApplicationController
   end
 
   def show
+    @job = Job.new
+    @staff = Staff.new
     @role = Role.find(params[:id])
 
     render("roles/show.html.erb")
