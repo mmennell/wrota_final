@@ -1,6 +1,9 @@
 class Role < ApplicationRecord
   # Direct associations
 
+  has_many   :jobs,
+             :dependent => :nullify
+
   has_many   :staffs,
              :dependent => :nullify
 
