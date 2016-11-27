@@ -1,4 +1,6 @@
 class Restaurant < ApplicationRecord
+  mount_uploader :logo_image, LogoImageUploader
+
   # Direct associations
 
   has_many   :roles,
